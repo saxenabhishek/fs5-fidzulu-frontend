@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    /* background-color: #edede9; */
+    /* background-color: #001d3d; */
+}
+
+
+/* Reduce scrollbar width */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Adjust the width as needed */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Set the background color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Set the color of the scroll thumb */
+    border-radius: 4px;
+    /* Add rounded corners to the thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Change the thumb color on hover */
+}
