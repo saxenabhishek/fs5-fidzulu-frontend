@@ -5,7 +5,7 @@ import { Product } from 'src/app/model/product';
 @Injectable({
   providedIn: 'root',
 })
-export class ProductServiceService {
+export class ProductService {
   productList: Product[] = [
     new Product(
       'Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport',

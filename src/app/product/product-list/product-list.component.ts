@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  constructor(){}
+  constructor(private ProductService){}
 
 }
