@@ -9,5 +9,10 @@ import { Product } from 'src/app/model/product';
 })
 export class ProductListComponent {
   productList: Product[] = [];
+
   constructor(private productService: ProductService) {}
+
+  ngOnInit() {
+    this.productList = this.productService.productList;
+  }
 }

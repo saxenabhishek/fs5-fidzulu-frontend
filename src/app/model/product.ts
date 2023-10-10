@@ -1,10 +1,10 @@
 export class Product {
   constructor(
-    title: string,
-    imageUrl: string,
-    description: string,
-    rating: number,
-    price: number
+    public title: string,
+    public imageUrl: string,
+    public description: string,
+    public rating: number,
+    public price: number
   ) {}
   toString(): String {
     return JSON.stringify(this);
