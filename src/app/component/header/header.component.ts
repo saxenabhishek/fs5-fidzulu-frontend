@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -19,5 +19,11 @@ export class HeaderComponent {
 
   ngOnInit() {
     this.navBarDisplay = window.innerWidth < 768 ? 'none' : 'block';
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.navBarDisplay = 'block';
+    // You can add your code to respond to window size changes here
   }
 }
