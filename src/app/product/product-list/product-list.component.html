@@ -3,7 +3,8 @@
     class="w-full max-w-sm bg-white border m-auto p-auto border-gray-200 rounded-lg shadow hover:shadow-xl transition-transform dark:bg-gray-800 dark:border-gray-700 mt-5"
     *ngFor="let product of productList"
   >
-    <a href="#">
+  <!-- Replace toys with product category when integrating -->
+    <a [routerLink]="['toys', product.title]" routerLinkActive="active" >
       <img
         class="p-8 rounded-t-lg h-48 w-full object-contain"
         [src]="product.imageUrl"
