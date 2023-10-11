@@ -1,0 +1,255 @@
+* {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Set the margin and padding for the whole page */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the background color and text color for the whole page */
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Set the width and margin for the container class */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Style the header section */
+.header {
+  /* Set the background color and height */
+  background-color: #7b2cbf;
+  height: 80px;
+}
+
+/* Style the logo element */
+.logo {
+  /* Set the height and width */
+  height: 60px;
+  width: 60px;
+  /* Position it on the left side of the header */
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Style the logo image */
+.logo img {
+  /* Set the height and width to fit the logo element */
+  height: 100%;
+  width: 100%;
+}
+
+/* Style the nav element */
+.nav {
+  /* Set the display to flex to align the items horizontally */
+  display: flex;
+  /* Position it on the right side of the header */
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Style the nav list element */
+.nav-list {
+  /* Set the display to flex to align the items horizontally */
+  display: flex;
+}
+
+/* Style the nav item element */
+.nav-item {
+  /* Set the margin and padding */
+  margin-left: 20px;
+  padding: 10px;
+}
+
+/* Style the nav link element */
+.nav-link {
+  /* Set the text color and decoration */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Style the hero section */
+.hero {
+  /* Set the background image and size */
+  background-image: url("https://res.cloudinary.com/dzs2aqnyc/image/upload/v1696997073/fidzulu/doaai5ch0iziqc94ktac.jpg");
+  /* background-color: #7b2cbf; */
+  background-size: cover;
+  /* Set the height and position */
+  height: 100vh;
+  position: relative;
+}
+
+/* Style the hero title element */
+.hero-title {
+  /* Set the font size, color, and weight */
+  font-size: 4rem;
+  color: #fff;
+  font-weight: bold;
+  /* Center it horizontally and vertically */
+  text-align: center;
+  margin-top: calc(50vh - (4rem / 2));
+}
+
+/* Style the hero subtitle element */
+.hero-subtitle {
+  /* Set the font size, color, and margin */
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 10px; /* Center it horizontally */
+  text-align: center;
+}
+.hero-button {
+  background-color: #ff9e00;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius : 10px;
+}
+
+.products {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.products-title {
+  font-size: 2.5rem;
+  color: #7b2cbf;
+  font-weight: bold;
+  text-align: center;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ff9e00;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding : 5px;
+}
+
+.product-image {
+  height: 200px;
+  width: 80%;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: #7b2cbf;
+  font-weight: normal;
+  text-align: center;
+  padding: 10px;
+}
+
+.product-link {
+  background-color: #ff9e00;
+  border: none;
+  padding: 10px;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+}
+/* Style the testimonial section */
+.testimonial {
+    /* Set the background color and padding */
+    background-color: #7B2CBF;
+    padding: 40px 0;
+  }
+  
+  /* Style the testimonial title element */
+  .testimonial-title {
+    /* Set the font size, color, and weight */
+    font-size: 2.5rem;
+    color: #FFF;
+    font-weight: bold;
+    /* Center it horizontally */
+    text-align: center;
+  }
+  
+  /* Style the testimonial slider element */
+  .testimonial-slider {
+    /* Set the display to flex to align the items horizontally */
+    display: flex;
+    /* Set the overflow to hidden to create a slider effect */
+    overflow: hidden;
+  }
+  
+  /* Style the testimonial card element */
+  .testimonial-card {
+    /* Set the background color, border, and box shadow */
+    background-color: #FFF;
+    border: 1px solid #FF9E00;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Set the width and margin */
+    width: calc(80% / 3);
+    margin: 0 auto;
+  }
+  
+  /* Style the customer image element */
+  .customer-image {
+    /* Set the height and width to fit the testimonial card element */
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    /* Center it horizontally and add some margin */
+    margin: 10px auto;
+  }
+  
+  /* Style the customer quote element */
+  .customer-quote {
+     /* Set the font size, color, and style */
+     font-size: .8rem;
+     color: #000;
+     font-style: italic; 
+     /* Add some padding and margin */
+     padding:10px; 
+     margin-top:10px; 
+  }
+  
+  /* Style the customer name element */
+  .customer-name {
+     /* Set the font size, color, and weight */
+     font-size:.8rem; 
+     color:#7B2CBF; 
+     font-weight:bold; 
+     /* Center it horizontally and add some margin */
+     text-align:center; 
+     margin-top:10px; 
+  }
+  
