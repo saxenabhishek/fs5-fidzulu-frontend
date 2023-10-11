@@ -1,0 +1,52 @@
+.bordered-card {
+  border: 1px solid #000000; /* You can customize the border style */
+  min-width: 95%;
+  border-radius: 20px;
+  margin: 16px;
+  align-items: center;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.teamlead-header-image {
+  background-image: url("https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?w=826&t=st=1696930072~exp=1696930672~hmac=0ab3ca2fa93c6c8c3caf3275db32ee9f8648ba74e1eb66c88b2c9ec7bb8a1116");
+  background-size: cover;
+}
+
+.about-list {
+  width: 100%;
+}
+
+.about-grid {
+  width: 100%;
+}
+
+mat-grid-tile {
+    padding: 0 !important; /* Use !important to override any other styles */
+    height: 100px !important;
+  }
+
+.bordered-card-text{
+    width: 40%;
+    border: 1px solid #000000; /* You can customize the border style */
+    border-radius: 20px;
+    align-items: center;
+    margin: 16px;    display: flex;
+    padding: 32px;
+    justify-content: center;
+    display: flex;
+}
+
+  
+  
+  
+  
+  
+.text-card-div{
+    display: flex;
+    justify-content: center;
+}
