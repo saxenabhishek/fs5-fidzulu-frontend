@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { ProductModule } from './product/product.module';
+import { LandingPageComponent } from './component/landing-page/landing-page.component';
 // import { StarRatingComponent } from './component/star-rating/star-rating.component';
 // import { ProductListComponent } from './product/product-list/product-list.component';
 
@@ -14,6 +15,7 @@ import { ProductModule } from './product/product.module';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    LandingPageComponent,
     // StarRatingComponent,
     // ProductListComponent,
   ],
