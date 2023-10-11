@@ -10,5 +10,6 @@ export class TeamMemberCardComponent {
   @Input() name: string = "Dog";
   @Input() corpid: string = "A11111";
   @Input() imageUrl: string = "https://material.angular.io/assets/img/examples/shiba2.jpg";
+  @Input() quote: string = "Ek Quote";
 
 }
