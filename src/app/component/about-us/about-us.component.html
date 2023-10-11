@@ -1,123 +1,85 @@
 <div class="centered-container">
   <mat-list role="list" class="about-list">
     <div class="text-card-div">
-      <c-carousel class="banner" [interval]="1000" transition="slide">
+      <c-carousel
+        class="banner"
+        [interval]="2000"
+        [animate]="false"
+        transition="crossfade"
+      >
         <c-carousel-inner>
-
           <c-carousel-item class="about-banner" *ngFor="let slide of slides">
             <img
               [src]="slide.src"
-              alt="{{slide.title}}"
-              loading="lazy"
+              alt="{{ slide.title }}"
+              class="d-block w-100"
+              loading="eager"
             />
           </c-carousel-item>
-          <!-- <c-carousel-item class="banner" >
-            <mat-card class="bordered-card-text banner" *angularCarouselSlide>
-              <p>
-              Welcome to Baravans!
-              <br />
-              Discover the world on wheels, through the pages of a book, or with
-              captivating movies. We are passionate about enabling people to explore
-              and learn new things, and our wide range of products is designed to
-              cater to the adventurous spirit within you. From bikes that take you
-              on exhilarating rides to books that transport you to distant lands,
-              and DVDs that immerse you in extraordinary stories - Baravans has it
-              all.
-            </p>
-            </mat-card>
-          </c-carousel-item>
-          <c-carousel-item >
-            <mat-card class="bordered-card-text" *angularCarouselSlide>
-              Welcome to Baravans!
-              <br />
-              Discover the world on wheels, through the pages of a book, or with
-              captivating movies. We are passionate about enabling people to explore
-              and learn new things, and our wide range of products is designed to
-              cater to the adventurous spirit within you. From bikes that take you
-              on exhilarating rides to books that transport you to distant lands,
-              and DVDs that immerse you in extraordinary stories - Baravans has it
-              all.
-            </mat-card>
-          </c-carousel-item> -->
         </c-carousel-inner>
+        <c-carousel-control
+          [routerLink]
+          caption="Previous"
+          direction="prev"
+        ></c-carousel-control>
+        <c-carousel-control
+          [routerLink]
+          caption="Next"
+          direction="next"
+        ></c-carousel-control>
       </c-carousel>
-      
     </div>
     <mat-card class="bordered-card">
       <mat-card-header>
-        <mat-card-title>Frontend</mat-card-title>
-        <mat-card-subtitle>Nayan Chordia</mat-card-subtitle>
+        <mat-card-title>Friends of Nayan - Frontend</mat-card-title>
+        <mat-card-subtitle>S Nayan</mat-card-subtitle>
         <div mat-card-avatar class="teamlead-header-image"></div>
       </mat-card-header>
-      <mat-grid-list cols="3" class="about-grid">
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
+      <mat-grid-list [cols]="getGridListCols()" class="about-grid">
+        <div *ngFor="let member of frontendTeamMembers">
+          <mat-grid-tile *ngIf="member.department === 'Frontend'"
+            ><app-team-member-card
+              [name]="member.name"
+              [corpid]="member.corpid"
+            ></app-team-member-card
+          ></mat-grid-tile>
+        </div>
       </mat-grid-list>
     </mat-card>
 
     <mat-card class="bordered-card">
       <mat-card-header>
-        <mat-card-title>Middleware</mat-card-title>
+        <mat-card-title>Disco Ninja's - Middleware</mat-card-title>
         <mat-card-subtitle>Senthooran B</mat-card-subtitle>
         <div mat-card-avatar class="teamlead-header-image"></div>
       </mat-card-header>
-      <mat-grid-list cols="3" class="about-grid">
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
+      <mat-grid-list [cols]="getGridListCols()" class="about-grid">
+        <div *ngFor="let member of frontendTeamMembers">
+          <mat-grid-tile *ngIf="member.department === 'Middleware'"
+            ><app-team-member-card
+              [name]="member.name"
+              [corpid]="member.corpid"
+            ></app-team-member-card
+          ></mat-grid-tile>
+        </div>
       </mat-grid-list>
     </mat-card>
 
     <mat-card class="bordered-card">
       <mat-card-header>
-        <mat-card-title>Backend</mat-card-title>
+        <mat-card-title>Backend Monsters - Backend</mat-card-title>
         <mat-card-subtitle>Akhil</mat-card-subtitle>
         <div mat-card-avatar class="teamlead-header-image"></div>
       </mat-card-header>
-      <mat-grid-list cols="3" class="about-grid">
-        <mat-grid-tile class="grid-tile"
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
-        <mat-grid-tile
-          ><app-team-member-card></app-team-member-card
-        ></mat-grid-tile>
+      <mat-grid-list [cols]="getGridListCols()" class="about-grid">
+        <div *ngFor="let member of frontendTeamMembers">
+          <mat-grid-tile *ngIf="member.department === 'Backend'"
+            ><app-team-member-card
+              [name]="member.name"
+              [corpid]="member.corpid"
+            ></app-team-member-card
+          ></mat-grid-tile>
+        </div>
       </mat-grid-list>
     </mat-card>
   </mat-list>
