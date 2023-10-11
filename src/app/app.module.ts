@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { ProductModule } from './product/product.module';
+import { ErrorComponent } from './error/error.component';
 // import { ProductListComponent } from './product/product-list/product-list.component';
 
 @NgModule({
@@ -13,9 +14,10 @@ import { ProductModule } from './product/product.module';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    ErrorComponent,
     // ProductListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ProductModule],
+  imports: [BrowserModule, ProductModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
