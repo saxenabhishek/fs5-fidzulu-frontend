@@ -13,20 +13,22 @@ describe('ProductDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductDetailComponent ],
+      declarations: [ProductDetailComponent],
       providers: [
         {
           provide: ActivatedRoute,
           useValue: {
             snapshot: {
-              paramMap: convertToParamMap({ name: 'TestProductName', service: 'TestServiceName' }),
+              paramMap: convertToParamMap({
+                name: 'TestProductName',
+                service: 'TestServiceName',
+              }),
             },
           },
         },
         ProductService,
       ],
-    })
-    .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ProductDetailComponent);
     component = fixture.componentInstance;
@@ -46,10 +48,34 @@ describe('ProductDetailComponent', () => {
 
   it('should set product from ProductService', () => {
     const products: Product[] = [
-      { title: 'Product 1', imageUrl: 'image-url-1', description: 'Description 1', price: 10 , rating:3},
-      { title: 'Product 2', imageUrl: 'image-url-2', description: 'Description 2', price: 20, rating:3 },
-      { title: 'Product 3', imageUrl: 'image-url-3', description: 'Description 3', price: 30, rating:3 },
-      { title: 'Product 4', imageUrl: 'image-url-4', description: 'Description 4', price: 40, rating:3},
+      {
+        title: 'Product 1',
+        imageUrl: 'image-url-1',
+        description: 'Description 1',
+        price: 10,
+        rating: 3,
+      },
+      {
+        title: 'Product 2',
+        imageUrl: 'image-url-2',
+        description: 'Description 2',
+        price: 20,
+        rating: 3,
+      },
+      {
+        title: 'Product 3',
+        imageUrl: 'image-url-3',
+        description: 'Description 3',
+        price: 30,
+        rating: 3,
+      },
+      {
+        title: 'Product 4',
+        imageUrl: 'image-url-4',
+        description: 'Description 4',
+        price: 40,
+        rating: 3,
+      },
     ];
 
     // Stub the ProductService's getAllProducts method to return an observable of products
@@ -58,5 +84,4 @@ describe('ProductDetailComponent', () => {
     component.ngOnInit();
     expect(component.product).toEqual(products[3]);
   });
-
 });
