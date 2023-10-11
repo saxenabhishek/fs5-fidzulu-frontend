@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { Product } from 'src/app/model/product';
 import { ProductService } from '../service/product-service.service';
@@ -34,7 +33,6 @@ describe('ProductDetailComponent', () => {
     component = fixture.componentInstance;
     productService = TestBed.inject(ProductService);
     activatedRoute = TestBed.inject(ActivatedRoute);
-    fixture.detectChanges();
   });
 
   it('should create', () => {
@@ -47,41 +45,27 @@ describe('ProductDetailComponent', () => {
   });
 
   it('should set product from ProductService', () => {
-    const products: Product[] = [
-      {
-        title: 'Product 1',
-        imageUrl: 'image-url-1',
-        description: 'Description 1',
-        price: 10,
-        rating: 3,
-      },
-      {
-        title: 'Product 2',
-        imageUrl: 'image-url-2',
-        description: 'Description 2',
-        price: 20,
-        rating: 3,
-      },
-      {
-        title: 'Product 3',
-        imageUrl: 'image-url-3',
-        description: 'Description 3',
-        price: 30,
-        rating: 3,
-      },
-      {
-        title: 'Product 4',
-        imageUrl: 'image-url-4',
-        description: 'Description 4',
-        price: 40,
-        rating: 3,
-      },
-    ];
+    const product: Product = new Product(
+      123, // Replace with the actual ID
+      'Test Brand Name',
+      'Test Colour',
+      999,
+      4.5,
+      'Test Image URL',
+      'Test Description',
+      'Test GPU',
+      'Test VRAM',
+      'Test CPU',
+      16,
+      512,
+      13.3,
+      'Test Model Name'
+    );
 
-    // Stub the ProductService's getAllProducts method to return an observable of products
-    spyOn(productService, 'getAllProducts').and.returnValue(products);
+    // Stub the getProductByName method of the ProductService
+    spyOn(productService, 'getProductByName').and.returnValue(product);
 
     component.ngOnInit();
-    expect(component.product).toEqual(products[3]);
+    expect(component.product).toEqual(product);
   });
 });

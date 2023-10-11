@@ -48,8 +48,8 @@ describe('ProductListComponent', () => {
       const titleElement = productElement.querySelector('.text-gray-900');
       const priceElement = productElement.querySelector('.font-bold');
 
-      expect(titleElement.textContent).toContain(product.title);
-      expect(priceElement.textContent).toContain(`$${product.price}`);
+      expect(titleElement.textContent).toContain(product.ModelName);
+      expect(priceElement.textContent).toContain(`$${product.Price}`);
     });
   });
 
@@ -64,7 +64,7 @@ describe('ProductListComponent', () => {
       const starRatingComponent = starRatingElements[index];
       const ratingValue = starRatingComponent.getAttribute('rating');
 
-      expect(+ratingValue).toBe(product.rating);
+      expect(+ratingValue).toBe(product.Ratings);
     });
   });
 
@@ -78,7 +78,7 @@ describe('ProductListComponent', () => {
     mockProductData.forEach((product, index) => {
       const routerLink = routerLinkElements[index].getAttribute('routerLink');
 
-      expect(routerLink).toBe(`/toys/${product.title}`);
+      expect(routerLink).toBe(`/toys/${product.ModelName}`);
     });
   });
 });

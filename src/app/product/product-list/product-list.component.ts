@@ -14,6 +14,13 @@ export class ProductListComponent {
   constructor(private productService: ProductService) {}
 
   ngOnInit() {
-    this.productList = this.productService.productList;
+    this.getAllProducts();
+  }
+
+  getAllProducts() {
+    this.productService.getAllProducts().subscribe((result) => {
+      this.productList = result;
+      console.log(this.productList);
+    });
   }
 }
