@@ -1,0 +1,86 @@
+<div class="centered-container">
+  <mat-list role="list" class="about-list">
+    <div class="text-card-div">
+      <c-carousel
+        class="banner"
+        [interval]="2000"
+        [animate]="false"
+        transition="crossfade"
+      >
+        <c-carousel-inner>
+          <c-carousel-item class="about-banner" *ngFor="let slide of slides">
+            <img
+              [src]="slide.src"
+              alt="{{ slide.title }}"
+              class="d-block w-100"
+              loading="eager"
+            />
+          </c-carousel-item>
+        </c-carousel-inner>
+        <c-carousel-control
+          [routerLink]
+          caption="Previous"
+          direction="prev"
+        ></c-carousel-control>
+        <c-carousel-control
+          [routerLink]
+          caption="Next"
+          direction="next"
+        ></c-carousel-control>
+      </c-carousel>
+    </div>
+    <mat-card class="bordered-card">
+      <mat-card-header>
+        <mat-card-title>Friends of Nayan - Frontend</mat-card-title>
+        <mat-card-subtitle>S Nayan</mat-card-subtitle>
+        <div mat-card-avatar class="teamlead-header-image"></div>
+      </mat-card-header>
+      <mat-grid-list [cols]="getGridListCols()" class="about-grid">
+        <div *ngFor="let member of frontendTeamMembers">
+          <mat-grid-tile *ngIf="member.department === 'Frontend'"
+            ><app-team-member-card
+              [name]="member.name"
+              [corpid]="member.corpid"
+            ></app-team-member-card
+          ></mat-grid-tile>
+        </div>
+      </mat-grid-list>
+    </mat-card>
+
+    <mat-card class="bordered-card">
+      <mat-card-header>
+        <mat-card-title>Disco Ninja's - Middleware</mat-card-title>
+        <mat-card-subtitle>Senthooran B</mat-card-subtitle>
+        <div mat-card-avatar class="teamlead-header-image"></div>
+      </mat-card-header>
+      <mat-grid-list [cols]="getGridListCols()" class="about-grid">
+        <div *ngFor="let member of frontendTeamMembers">
+          <mat-grid-tile *ngIf="member.department === 'Middleware'"
+            ><app-team-member-card
+              [name]="member.name"
+              [corpid]="member.corpid"
+            ></app-team-member-card
+          ></mat-grid-tile>
+        </div>
+      </mat-grid-list>
+    </mat-card>
+
+    <mat-card class="bordered-card">
+      <mat-card-header>
+        <mat-card-title>Backend Monsters - Backend</mat-card-title>
+        <mat-card-subtitle>Akhil</mat-card-subtitle>
+        <div mat-card-avatar class="teamlead-header-image"></div>
+      </mat-card-header>
+      <mat-grid-list [cols]="getGridListCols()" class="about-grid">
+        <div *ngFor="let member of frontendTeamMembers">
+          <mat-grid-tile *ngIf="member.department === 'Backend'"
+            ><app-team-member-card
+              [name]="member.name"
+              [corpid]="member.corpid"
+            ></app-team-member-card
+          ></mat-grid-tile>
+        </div>
+      </mat-grid-list>
+    </mat-card>
+  </mat-list>
+</div>
