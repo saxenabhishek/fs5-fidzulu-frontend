@@ -3,21 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './component/landing-page/landing-page.component';
 import { ErrorComponent } from './error/error.component';
 
-
 const routes: Routes = [
-  {path:"", component:LandingPageComponent, pathMatch:"full"},
+  { path: '', component: LandingPageComponent },
   {
-    path: "products",
+    path: 'products',
     loadChildren: () =>
-      import("./product/product.module").then((mod) => mod.ProductModule),
+      import('./product/product.module').then((mod) => mod.ProductModule),
   },
-  {path:"**", component:ErrorComponent}
+  { path: '**', component: ErrorComponent },
 ];
-
 
 // configures NgModule imports and exports
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
