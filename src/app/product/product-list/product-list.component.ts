@@ -19,7 +19,7 @@ export class ProductListComponent {
 
   getAllProducts() {
     this.productService.getAllProducts().subscribe((result) => {
-      this.productList = result;
+      this.productList = result.body;
       console.log(this.productList);
     });
   }
