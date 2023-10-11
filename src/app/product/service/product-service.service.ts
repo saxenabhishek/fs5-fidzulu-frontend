@@ -35,6 +35,13 @@ export class ProductService {
       4.7,
       1399
     ),
+    new Product(
+      'Dell XPS 13 Laptop, Intel Core i7, 16GB RAM, 512GB SSD',
+      '/assets/images/dell-laptop.jpg',
+      'Description for Dell XPS 13 Laptop',
+      4.7,
+      1399
+    ),
     // Add more products here if needed
   ];
   constructor() {}
