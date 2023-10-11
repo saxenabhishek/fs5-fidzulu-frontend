@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {MatCardModule} from '@angular/material/card';
+import {MatNativeDateModule, MatRippleModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
 
 import { TeamMemberCardComponent } from './team-member-card.component';
 
@@ -8,7 +11,12 @@ describe('TeamMemberCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TeamMemberCardComponent ]
+      declarations: [ TeamMemberCardComponent ],
+      imports: [  MatCardModule,
+                  MatNativeDateModule,
+                  MatRippleModule,
+                  MatIconModule
+                ]
     })
     .compileComponents();
 
@@ -20,4 +28,5 @@ describe('TeamMemberCardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
