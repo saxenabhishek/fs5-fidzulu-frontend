@@ -1,0 +1,16 @@
+<div class="flex items-center">
+  <ng-container *ngFor="let star of stars">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-6 h-6 fill-current"
+      [ngClass]="{
+        'text-yellow-400': star <= rating,
+        'text-gray-300': star > rating
+      }"
+    >
+      <path
+        d="M12 2l2.7 7.7h8.3l-6.7 4.8 2.6 7.8-7-5.5-7 5.5 2.7-7.8-6.7-4.8h8.3z"
+      />
+    </svg>
+  </ng-container>
+</div>
