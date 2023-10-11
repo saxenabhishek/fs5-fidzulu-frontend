@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './component/header/header.component';
+import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './component/footer/footer.component';
 import { ProductModule } from './product/product.module';
 import { LandingPageComponent } from './component/landing-page/landing-page.component';
