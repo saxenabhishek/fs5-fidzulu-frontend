@@ -1,10 +1,10 @@
-<mat-card class="profile-card">
+<mat-card>
     <mat-card-header>
-      <!-- <div mat-card-avatar class="profile-image"></div> -->
       <mat-card-title>{{name}}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image src={{imageUrl}} alt="Photo of a Shiba Inu">
+    <img mat-card-image src={{imageUrl}} alt="Photo of {{name}}">
     <mat-card-content>
       <p>{{corpid}}</p>
+      <p>{{quote}}</p>
     </mat-card-content>
 </mat-card>
