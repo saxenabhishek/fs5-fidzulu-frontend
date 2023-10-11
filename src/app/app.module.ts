@@ -6,8 +6,8 @@ import {MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './component/header/header.component';
+import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './component/footer/footer.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 
@@ -18,6 +18,11 @@ import { TeamMemberCardComponent } from './component/team-member-card/team-membe
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from '@coreui/angular';
 
+import { ProductModule } from './product/product.module';
+import { ErrorComponent } from './error/error.component';
+import { LandingPageComponent } from './component/landing-page/landing-page.component';
+// import { StarRatingComponent } from './component/star-rating/star-rating.component';
+// import { ProductListComponent } from './product/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +49,11 @@ import { CarouselModule } from '@coreui/angular';
     MatRippleModule,
     MatIconModule,
     CarouselModule,
+    ProductModule,
+    ErrorComponent,
+    LandingPageComponent,
+    // StarRatingComponent,
+    // ProductListComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
