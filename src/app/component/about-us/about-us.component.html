@@ -1,16 +1,47 @@
 <div class="centered-container">
   <mat-list role="list" class="about-list">
     <div class="text-card-div">
-      <mat-card class="bordered-card-text">
-        Welcome to Baravans!
-        <br />
-        Discover the world on wheels, through the pages of a book, or with
-        captivating movies. We are passionate about enabling people to explore
-        and learn new things, and our wide range of products is designed to
-        cater to the adventurous spirit within you. From bikes that take you on
-        exhilarating rides to books that transport you to distant lands, and
-        DVDs that immerse you in extraordinary stories - Baravans has it all.
-      </mat-card>
+      <c-carousel class="banner" [interval]="1000" transition="slide">
+        <c-carousel-inner>
+
+          <c-carousel-item class="about-banner" *ngFor="let slide of slides">
+            <img
+              [src]="slide.src"
+              alt="{{slide.title}}"
+              loading="lazy"
+            />
+          </c-carousel-item>
+          <!-- <c-carousel-item class="banner" >
+            <mat-card class="bordered-card-text banner" *angularCarouselSlide>
+              <p>
+              Welcome to Baravans!
+              <br />
+              Discover the world on wheels, through the pages of a book, or with
+              captivating movies. We are passionate about enabling people to explore
+              and learn new things, and our wide range of products is designed to
+              cater to the adventurous spirit within you. From bikes that take you
+              on exhilarating rides to books that transport you to distant lands,
+              and DVDs that immerse you in extraordinary stories - Baravans has it
+              all.
+            </p>
+            </mat-card>
+          </c-carousel-item>
+          <c-carousel-item >
+            <mat-card class="bordered-card-text" *angularCarouselSlide>
+              Welcome to Baravans!
+              <br />
+              Discover the world on wheels, through the pages of a book, or with
+              captivating movies. We are passionate about enabling people to explore
+              and learn new things, and our wide range of products is designed to
+              cater to the adventurous spirit within you. From bikes that take you
+              on exhilarating rides to books that transport you to distant lands,
+              and DVDs that immerse you in extraordinary stories - Baravans has it
+              all.
+            </mat-card>
+          </c-carousel-item> -->
+        </c-carousel-inner>
+      </c-carousel>
+      
     </div>
     <mat-card class="bordered-card">
       <mat-card-header>
@@ -62,10 +93,7 @@
         <mat-card-subtitle>Akhil</mat-card-subtitle>
         <div mat-card-avatar class="teamlead-header-image"></div>
       </mat-card-header>
-      <mat-grid-list
-        cols="3"
-        class="about-grid"
-      >
+      <mat-grid-list cols="3" class="about-grid">
         <mat-grid-tile class="grid-tile"
           ><app-team-member-card></app-team-member-card
         ></mat-grid-tile>
@@ -94,4 +122,3 @@
     </mat-card>
   </mat-list>
 </div>
-

@@ -16,7 +16,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { TeamMemberCardComponent } from './component/team-member-card/team-member-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { CarouselModule } from '@coreui/angular';
 
 @NgModule({
   declarations: [
@@ -42,6 +42,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatNativeDateModule,
     MatRippleModule,
     MatIconModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent],
