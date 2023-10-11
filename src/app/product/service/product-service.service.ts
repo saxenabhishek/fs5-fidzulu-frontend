@@ -6,6 +6,9 @@ import { Product } from 'src/app/model/product';
   providedIn: 'root',
 })
 export class ProductService {
+  getProductByName(productCategory: String, productName: String): Product | undefined {
+    return this.productList.find(product => product.title === productName);
+  }
   productList: Product[] = [
     new Product(
       'Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport',

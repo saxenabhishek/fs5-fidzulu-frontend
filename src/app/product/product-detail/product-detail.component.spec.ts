@@ -41,7 +41,7 @@ describe('ProductDetailComponent', () => {
 
   it('should initialize productName and service from route params', () => {
     expect(component.productName).toEqual('TestProductName');
-    expect(component.service).toEqual('TestServiceName');
+    expect(component.productCategory).toEqual('TestServiceName');
   });
 
   it('should set product from ProductService', () => {

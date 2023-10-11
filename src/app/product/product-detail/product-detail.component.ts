@@ -11,7 +11,7 @@ import { Product } from 'src/app/model/product';
 export class ProductDetailComponent {
 
   productName?:String;
-  service?: string;
+  productCategory?: String;
 
   product?:Product;
 
@@ -19,8 +19,9 @@ export class ProductDetailComponent {
 
   ngOnInit(){
     this.productName = this.route.snapshot.paramMap.get('name') || "";
-    this.service = this.route.snapshot.paramMap.get('service') || "";
+    this.productCategory = this.route.snapshot.paramMap.get('service') || "";
     this.product = this.productService.getAllProducts()[3]
+    this.product = this.productService.getProductByName(this.productCategory, this.productName)
   }
 
 }
