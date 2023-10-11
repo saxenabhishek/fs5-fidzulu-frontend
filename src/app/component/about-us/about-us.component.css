@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
+  margin: 16px;
 }
 
 .teamlead-header-image {
@@ -25,13 +26,9 @@
   width: 100%;
 }
 
-mat-grid-tile {
-    padding: 0 !important; /* Use !important to override any other styles */
-    height: 100px !important;
-  }
 
 .bordered-card-text{
-    width: 40%;
+    width: 80%;
     border: 1px solid #000000; /* You can customize the border style */
     border-radius: 20px;
     align-items: center;
@@ -39,6 +36,7 @@ mat-grid-tile {
     padding: 32px;
     justify-content: center;
     display: flex;
+    background-color: rgba(255,142,0,0.5);
 }
 
   
