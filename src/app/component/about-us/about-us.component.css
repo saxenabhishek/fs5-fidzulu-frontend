@@ -1,9 +1,11 @@
 .bordered-card {
   border: 1px solid #000000; /* You can customize the border style */
-  min-width: 95%;
+  min-width: 90%;
   border-radius: 20px;
   margin: 16px;
   align-items: center;
+  background-color: rgba(0,0,0,0.05);
+
 }
 
 .centered-container {
@@ -11,6 +13,7 @@
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   margin: 16px;
+  
 }
 
 .teamlead-header-image {
@@ -50,5 +53,5 @@
 }
 
 .about-banner{
-  margin: 32px;
+  margin: 0px;
 }

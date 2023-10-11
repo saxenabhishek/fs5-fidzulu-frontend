@@ -18,6 +18,7 @@ import { TeamMemberCardComponent } from './component/team-member-card/team-membe
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from '@coreui/angular';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,7 @@ import { CarouselModule } from '@coreui/angular';
     MatNativeDateModule,
     MatRippleModule,
     MatIconModule,
-    CarouselModule
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
