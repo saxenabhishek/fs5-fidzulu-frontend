@@ -35,6 +35,13 @@ export class ProductService {
       4.7,
       1399
     ),
+    new Product(
+      'Vincent-Chair-Walnut-Angle',
+      'https://res.cloudinary.com/dzs2aqnyc/image/upload/v1697002914/fidzulu/cy5vn3bwlpn9hewge3fn.webp',
+      "Elevate your living space with the timeless sophistication of the Vincent Chair in Walnut Angle. This exquisite piece of furniture combines form and function, making it the perfect addition to any contemporary home or office setting. The Vincent Chair boasts a sleek and modern design that effortlessly complements a wide range of interior styles. Crafted with precision, the chair's angular frame in rich walnut finish exudes warmth and character, while its clean lines and minimalist silhouette create a sense of refined simplicity.",
+      4.9,
+      349
+    ),
     // Add more products here if needed
   ];
   constructor() {}
