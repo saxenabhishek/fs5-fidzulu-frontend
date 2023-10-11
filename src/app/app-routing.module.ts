@@ -7,13 +7,13 @@ import { LandingPageComponent } from './component/landing-page/landing-page.comp
 import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
-  { path: 'about', component: AboutUsComponent },
+ 
   { path: '', component: LandingPageComponent },
   {
     path: 'products',
     loadChildren: () =>
       import('./product/product.module').then((mod) => mod.ProductModule),
-  },
+  }, { path: 'about', component: AboutUsComponent },
   { path: '**', component: ErrorComponent },
 ];
 

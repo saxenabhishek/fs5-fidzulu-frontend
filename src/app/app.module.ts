@@ -31,7 +31,8 @@ import { LandingPageComponent } from './component/landing-page/landing-page.comp
     FooterComponent,
     AboutUsComponent,
     TeamMemberCardComponent,
-    TeamMemberCardComponent
+    TeamMemberCardComponent,  ErrorComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,8 +51,7 @@ import { LandingPageComponent } from './component/landing-page/landing-page.comp
     MatIconModule,
     CarouselModule,
     ProductModule,
-    ErrorComponent,
-    LandingPageComponent,
+  
     // StarRatingComponent,
     // ProductListComponent,
   ],
