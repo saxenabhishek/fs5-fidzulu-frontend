@@ -25,6 +25,10 @@ export class ProductListComponent {
   getAllProducts(productCategory: string, country : string) {
     this.productService.getAllProducts(productCategory, country).subscribe((result) => {
       this.productList = result;
+      this.productList = result.map((e, idx)=>{
+        return {...e, idx:idx}
+      })
+      this.productService.setAllProducts(this.productList);
       console.log(this.productList);
     });
   }

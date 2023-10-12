@@ -9,7 +9,7 @@ import { Product } from 'src/app/model/product';
   styleUrls: ['./product-detail.component.css'],
 })
 export class ProductDetailComponent {
-  productName?: String;
+  productIdx?: String;
   productCategory?: String;
 
   product?: Product;
@@ -20,12 +20,13 @@ export class ProductDetailComponent {
   ) {}
 
   ngOnInit() {
-    this.productName = this.route.snapshot.paramMap.get('name') || '';
+    this.productIdx = this.route.snapshot.paramMap.get('name') || '';
     this.productCategory = this.route.snapshot.paramMap.get('service') || '';
     // this.product = this.productService.getAllProducts()[3]
     this.product = this.productService.getProductByName(
       this.productCategory,
-      this.productName
+      this.productIdx
     );
+    console.debug(this.product)
   }
 }

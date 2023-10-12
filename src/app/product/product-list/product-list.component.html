@@ -4,7 +4,7 @@
     *ngFor="let product of productList"
   >
     <!-- Replace toys with product category when integrating -->
-    <a [routerLink]="['toys', product.ModelName]" routerLinkActive="active">
+    <a [routerLink]=" '' + product.idx || '-1'  ">
       <img
         class="p-8 rounded-t-lg h-48 w-full object-contain"
         [src]="product.ImageUrl"

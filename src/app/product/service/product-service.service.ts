@@ -7,15 +7,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ProductService {
+  productList: Product[] = [];
   getProductByName(
     productCategory: String,
-    productName: String
+    productIdx: String
   ): Product | undefined {
     return this.productList.find(
-      (product) => product.ModelName === productName
+      (product) => {
+        console.log(product.idx?.toString(), productIdx, product)
+        return product.idx?.toString() == productIdx}
     );
   }
-  productList: Product[] = [];
 
   API_URL =
     'http://ec2-43-205-242-183.ap-south-1.compute.amazonaws.com:3021/classA/food/all/IE';
@@ -65,5 +67,10 @@ export class ProductService {
       }
       return response;
     });
+  }
+
+  setAllProducts(prd:Product[]){
+    this.productList = prd;
+    console.log(this.productList)
   }
 }

@@ -40,7 +40,7 @@ describe('ProductDetailComponent', () => {
   });
 
   it('should initialize productName and service from route params', () => {
-    expect(component.productName).toEqual('TestProductName');
+    expect(component.productIdx).toEqual('TestProductName');
     expect(component.productCategory).toEqual('TestServiceName');
   });
 

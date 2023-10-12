@@ -1,5 +1,6 @@
 export class Product {
   constructor(
+    
     public LaptopId: number,
     public BrandName: string,
     public Colour: string,
@@ -15,7 +16,8 @@ export class Product {
     public RAM?: number,
     public Storage?: number,
     public ScreenSize?: number,
-    public ModelName?: string
+    public ModelName?: string,
+    public idx?: number,
   ) {}
 
   toString(): string {
