@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Product } from 'src/app/model/product';
 import { HttpClient } from '@angular/common/http';
 
@@ -17,10 +17,12 @@ export class ProductService {
   }
   productList: Product[] = [];
 
-  API_URL = 'http://127.0.0.1:3022/classB/laptops/all/US-NC';
+  API_URL = 'http://ec2-43-205-242-183.ap-south-1.compute.amazonaws.com:3021/classA/food/all/IE';
   constructor(private httpClient: HttpClient) {}
 
   getAllProducts(): Observable<Product[]> {
-    return this.httpClient.get<Product[]>(`${this.API_URL}`);
+    return this.httpClient.get<{body : Product[]}>(`${this.API_URL}`).pipe(
+      map((response:{body : Product[]}) => response.body)
+    );
   }
 }

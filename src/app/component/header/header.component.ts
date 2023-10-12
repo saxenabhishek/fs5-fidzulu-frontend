@@ -6,6 +6,7 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+  navBarDisplay = "block";
   isMenuOpen: boolean = false;
 
   toggleNavBarDisplay() {

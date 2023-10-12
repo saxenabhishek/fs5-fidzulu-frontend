@@ -2,4 +2,14 @@
     background-color: #edf2f4;
     padding-bottom: 40px;
     width:100%;
+    align-items: center;
+}
+.product-class{
+    margin-right: 30px;
+    align-items: center;
+}
+.main-div{
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
