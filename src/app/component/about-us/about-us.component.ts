@@ -69,9 +69,9 @@ export class AboutUsComponent {
 
   getAllMembers() {
     this.aboutUsService.getAllMembers().subscribe((response) => {
-      if (response && response.body && Array.isArray(response.body)) {
+      if (response ) {
         
-        this.frontendTeamMembers = response.body;
+        this.frontendTeamMembers = response;
         for ( const i of this.frontendTeamMembers){
     
           if(i.name === 'Vanditha'){
