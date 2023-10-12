@@ -311,8 +311,8 @@ body {
      /* Add some padding and margin */
      padding:10px; 
      margin-top:10px;
-     height: 200px;
-     overflow: scroll;
+     height: 250px;
+     overflow-y: auto;
   }
   
   /* Style the customer name element */
