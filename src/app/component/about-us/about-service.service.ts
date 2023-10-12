@@ -11,10 +11,10 @@ export class AboutServiceService {
   
   membersList: Member[] = [];
 
-  API_URL = 'http://localhost:3034/books/teams';
+  API_URL = 'http://ec2-43-205-242-183.ap-south-1.compute.amazonaws.com:3022/classB/books/teams';
   constructor(private httpClient: HttpClient) {}
 
-  getAllMembers(): Observable<any> {
-    return this.httpClient.get<any>(`${this.API_URL}`);
+  getAllMembers(): Observable<Member[]> {
+    return this.httpClient.get<Member[]>(`${this.API_URL}`);
   }
 }
