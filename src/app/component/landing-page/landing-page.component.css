@@ -18,12 +18,6 @@ body {
   color: #000;
 }
 
-/* Set the width and margin for the container class */
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
 /* Style the header section */
 .header {
   /* Set the background color and height */
@@ -81,6 +75,12 @@ body {
   text-decoration: none;
 }
 
+/* Set the width and margin for the container class */
+.container {
+  /* width: 80%; */
+  /* margin: 0 auto; */
+}
+
 /* Style the hero section */
 .hero {
   /* Set the background image and size */
@@ -88,7 +88,7 @@ body {
   /* background-color: #7b2cbf; */
   background-size: cover;
   /* Set the height and position */
-  height: 100vh;
+  height: 125vh;
   position: relative;
 }
 
@@ -100,7 +100,8 @@ body {
   font-weight: bold;
   /* Center it horizontally and vertically */
   text-align: center;
-  margin-top: calc(50vh - (4rem / 2));
+  /* margin-top: calc(50vh - (4rem / 2)); */
+  line-height: 70px;
 }
 
 /* Style the hero subtitle element */
@@ -110,6 +111,7 @@ body {
   color: #fff;
   margin-top: 10px; /* Center it horizontally */
   text-align: center;
+  line-height: 30px;
 }
 .hero-button {
   background-color: #ff9e00;
@@ -119,13 +121,28 @@ body {
   color: #fff;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 40px;
   border-radius : 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .hero-button {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .hero {
+    padding: 20px;
+  }
 }
 
 .products {
   background-color: #fff;
-  padding: 40px 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .products-title {
@@ -136,10 +153,14 @@ body {
 }
 
 .products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
+  grid-gap: 20px; */
+  flex-wrap: wrap;
   margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-card {
@@ -150,12 +171,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding : 5px;
+  padding: 10px;
+  width: 250px;
+  margin: 10px;
 }
 
 .product-image {
+  max-height: 190px;
+  width: auto;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 200px;
-  width: 80%;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .product-name {
@@ -163,7 +196,7 @@ body {
   color: #000;
   font-weight: bold;
   text-align: center;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .product-price {
@@ -171,7 +204,7 @@ body {
   color: #7b2cbf;
   font-weight: normal;
   text-align: center;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .product-link {
@@ -189,7 +222,18 @@ body {
 .testimonial {
     /* Set the background color and padding */
     background-color: #7B2CBF;
-    padding: 40px 0;
+    padding: 10px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  .testimonial-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   
   /* Style the testimonial title element */
@@ -206,8 +250,12 @@ body {
   .testimonial-slider {
     /* Set the display to flex to align the items horizontally */
     display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
     /* Set the overflow to hidden to create a slider effect */
-    overflow: hidden;
   }
   
   /* Style the testimonial card element */
@@ -217,29 +265,50 @@ body {
     border: 1px solid #FF9E00;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     /* Set the width and margin */
-    width: calc(80% / 3);
-    margin: 0 auto;
+    max-width: 300px;
+    /* margin: 0 auto; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: min-content;
+    margin: 10px;
   }
-  
+
+  .customer-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    padding: 10px;
+  }
+
   /* Style the customer image element */
   .customer-image {
     /* Set the height and width to fit the testimonial card element */
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
+    
+    max-height: 150px;
+    width: auto;
+    border-radius: 70px;
+    
     /* Center it horizontally and add some margin */
-    margin: 10px auto;
   }
   
   /* Style the customer quote element */
   .customer-quote {
      /* Set the font size, color, and style */
+     display: flex;
      font-size: .8rem;
      color: #000;
      font-style: italic; 
      /* Add some padding and margin */
      padding:10px; 
-     margin-top:10px; 
+     margin-top:10px;
+     height: 250px;
+     overflow-y: auto;
   }
   
   /* Style the customer name element */
