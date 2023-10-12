@@ -45,9 +45,6 @@ describe('Footer Test', () => {
         cy.get('footer div div span ').contains('© 2023');
         cy.get('footer div div span a').contains('FidZulu™');
         cy.get('footer div div span ').contains(' All Rights Reserved.');
-        // cy.get('footer div div div div ul li a ').contains('Privacy Policy');
-        // appPage.navigateToHomePage();
-        // cy.get('footer div div div div ul li a ').contains('Terms & Conditions');
         appPage.navigateToHomePage();
     });
 
