@@ -59,8 +59,7 @@
 
 /* Customize the toolbar's background color and height */
 mat-toolbar {
-    background-color: #333333; /* Replace with your desired background color */
-    height: 70px; /* Adjust the height as needed */
+    background-color: #333333; /* Replace with your desired background color */ /* Adjust the height as needed */
     padding: 8px; /* Adjust the padding as needed */
     justify-content: space-between;
   }
@@ -73,6 +72,7 @@ mat-toolbar {
     height: 60px !important;
     padding: 0px !important;
 }
-  
-  
-   
+.right-positioned{
+  position: absolute;
+  right : 0;
+}
