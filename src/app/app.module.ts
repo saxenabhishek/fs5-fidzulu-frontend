@@ -23,6 +23,7 @@ import { ErrorComponent } from './error/error.component';
 import { LandingPageComponent } from './component/landing-page/landing-page.component';
 // import { StarRatingComponent } from './component/star-rating/star-rating.component';
 // import { ProductListComponent } from './product/product-list/product-list.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -51,12 +52,13 @@ import { LandingPageComponent } from './component/landing-page/landing-page.comp
     MatIconModule,
     CarouselModule,
     ProductModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule
   
     // StarRatingComponent,
     // ProductListComponent,
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
