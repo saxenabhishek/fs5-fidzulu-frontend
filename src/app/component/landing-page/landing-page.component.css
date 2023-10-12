@@ -222,7 +222,18 @@ body {
 .testimonial {
     /* Set the background color and padding */
     background-color: #7B2CBF;
-    padding: 40px 0;
+    padding: 10px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  .testimonial-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   
   /* Style the testimonial title element */
@@ -239,8 +250,13 @@ body {
   .testimonial-slider {
     /* Set the display to flex to align the items horizontally */
     display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
     /* Set the overflow to hidden to create a slider effect */
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   
   /* Style the testimonial card element */
@@ -250,29 +266,53 @@ body {
     border: 1px solid #FF9E00;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     /* Set the width and margin */
-    width: calc(80% / 3);
-    margin: 0 auto;
+    /* width: calc(80% / 3); */
+    max-width: 300px;
+    /* margin: 0 auto; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: min-content;
+    margin: 10px;
   }
-  
+
+  .customer-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    padding: 10px;
+  }
+
   /* Style the customer image element */
   .customer-image {
     /* Set the height and width to fit the testimonial card element */
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
+    
+    max-height: 150px;
+    width: auto;
+    border-radius: 70px;
+    /* width: inherit; */
+    
     /* Center it horizontally and add some margin */
-    margin: 10px auto;
+    /* margin: 10px auto; */
   }
   
   /* Style the customer quote element */
   .customer-quote {
      /* Set the font size, color, and style */
+     display: flex;
      font-size: .8rem;
      color: #000;
      font-style: italic; 
      /* Add some padding and margin */
      padding:10px; 
-     margin-top:10px; 
+     margin-top:10px;
+     height: 200px;
+     overflow: scroll;
   }
   
   /* Style the customer name element */
