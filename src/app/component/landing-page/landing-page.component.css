@@ -256,7 +256,6 @@ body {
     flex-wrap: wrap;
     
     /* Set the overflow to hidden to create a slider effect */
-    /* overflow: hidden; */
   }
   
   /* Style the testimonial card element */
@@ -266,7 +265,6 @@ body {
     border: 1px solid #FF9E00;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     /* Set the width and margin */
-    /* width: calc(80% / 3); */
     max-width: 300px;
     /* margin: 0 auto; */
     padding: 10px;
@@ -295,10 +293,8 @@ body {
     max-height: 150px;
     width: auto;
     border-radius: 70px;
-    /* width: inherit; */
     
     /* Center it horizontally and add some margin */
-    /* margin: 10px auto; */
   }
   
   /* Style the customer quote element */
