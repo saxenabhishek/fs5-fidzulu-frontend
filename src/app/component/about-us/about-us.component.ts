@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { HttpClient } from '@angular/common/http';
+import { Member } from 'src/app/model/member';
+import { AboutServiceService } from './about-service.service';
 
 @Component({
   selector: 'app-about-us',
@@ -16,18 +18,21 @@ export class AboutUsComponent {
     title: '',
     subtitle: '',
   });
-  frontendTeamMembers: any[] = new Array(3).fill({
-    name: '',
-    teamName: '',
-    quote: '',
-    imageLink: '',
-    corpid: '',
-    department: '',
-  });
+  // frontendTeamMembers: any[] = new Array(3).fill({
+  //   name: '',
+  //   teamName: '',
+  //   quote: '',
+  //   imageLink: '',
+  //   corpid: '',
+  //   department: '',
+  // });
   constructor(
     private breakpointObserver: BreakpointObserver,
-    // private http: HttpClient
+    private http: HttpClient,
+    private aboutUsService: AboutServiceService
   ) {}
+
+  frontendTeamMembers: Member[] = [];
 
   ngOnInit(): void {
     this.slides[0] = {
@@ -39,35 +44,10 @@ export class AboutUsComponent {
     this.slides[2] = {
       src: './assets/3.png',
     };
-    this.frontendTeamMembers[0] = {
-      name: 'Aditya',
-      corpid: 'A721312',
-      department: 'Frontend',
-    };
-    this.frontendTeamMembers[1] = {
-      name: 'Nayan',
-      corpid: 'A721312',
-      department: 'Frontend',
-    };
-    this.frontendTeamMembers[2] = {
-      name: 'Vanditha',
-      corpid: 'A721312',
-      department: 'Frontend',
-    };
-    this.frontendTeamMembers[3] = {
-      name: 'Akhil P',
-      corpid: 'A721312',
-      department: 'Backend',
-    };
 
-    // this.http.get('http://localhost:8080/teammembers').subscribe(
-    //   (data: any) => {
-    //     this.frontendTeamMembers = data; // Assuming data is in JSON format
-    //   },
-    //   (error) => {
-    //     console.error('Error fetching team members:', error);
-    //   }
-    // );
+    this.getAllMembers();
+
+    
   }
 
   onItemChange($event: any): void {
@@ -85,5 +65,25 @@ export class AboutUsComponent {
       return 2;
     }
     return 1;
+  }
+
+  getAllMembers() {
+    this.aboutUsService.getAllMembers().subscribe((response) => {
+      if (response && response.body && Array.isArray(response.body)) {
+        
+        this.frontendTeamMembers = response.body;
+        for ( const i of this.frontendTeamMembers){
+    
+          if(i.name === 'Vanditha'){
+            i.imageLink = "https://i.ibb.co/28HrJ5Y/a723564.png"
+          }
+        }
+        console.log(this.frontendTeamMembers);
+      } else {
+        console.error('Invalid JSON structure');
+      }
+    });
+
+   
   }
 }
