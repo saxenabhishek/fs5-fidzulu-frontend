@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductService } from '../service/product-service.service';
 import { Product } from 'src/app/model/product';
 import { StarRatingComponent } from 'src/app/component/star-rating/star-rating.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -10,15 +11,19 @@ import { StarRatingComponent } from 'src/app/component/star-rating/star-rating.c
 })
 export class ProductListComponent {
   productList: Product[] = [];
+  productCategory?: string;
+  country ?: string;
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService,     private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.getAllProducts();
+    this.productCategory = this.route.snapshot.paramMap.get('service') || '';
+    this.country = this.route.snapshot.paramMap.get('country') || '';
+    this.getAllProducts(this.productCategory, this.country);
   }
 
-  getAllProducts() {
-    this.productService.getAllProducts().subscribe((result) => {
+  getAllProducts(productCategory: string, country : string) {
+    this.productService.getAllProducts(productCategory, country).subscribe((result) => {
       this.productList = result;
       console.log(this.productList);
     });
