@@ -17,7 +17,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { TeamMemberCardComponent } from './component/team-member-card/team-member-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from '@coreui/angular';
-
+import { MatToolbarModule } from '@angular/material/toolbar'; // Import MatToolbarModule
 import { ProductModule } from './product/product.module';
 import { ErrorComponent } from './error/error.component';
 import { LandingPageComponent } from './component/landing-page/landing-page.component';
@@ -51,6 +51,7 @@ import { LandingPageComponent } from './component/landing-page/landing-page.comp
     MatIconModule,
     CarouselModule,
     ProductModule,
+    MatToolbarModule
   
     // StarRatingComponent,
     // ProductListComponent,

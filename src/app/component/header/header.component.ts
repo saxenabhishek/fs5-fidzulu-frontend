@@ -6,24 +6,25 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  navBarDisplay = 'none';
+  isMenuOpen: boolean = false;
 
   toggleNavBarDisplay() {
-    this.navBarDisplay = this.navBarDisplay === 'none' ? 'block' : 'none';
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   getNavBarDisplayStyle() {
-    // Use 'block' for smaller screens and 'none' for larger screens
-    return window.innerWidth < 768 ? this.navBarDisplay : 'block';
+    return window.innerWidth < 768 ? 'none' : 'block';
   }
 
   ngOnInit() {
-    this.navBarDisplay = window.innerWidth < 768 ? 'none' : 'block';
+    this.isMenuOpen = false;
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
-    this.navBarDisplay = 'block';
-    // You can add your code to respond to window size changes here
+    if (window.innerWidth >= 768) {
+      // Close the menu if the screen size becomes larger
+      this.isMenuOpen = false;
+    }
   }
 }
